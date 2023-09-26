@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+class student
+{
+protected:
+  int id;
+  string name;
+public:
+    void get()
+    {
+        cout<<"Enter Id:"<<endl;
+        cin>>id;
+        cout<<"Enter Name:"<<endl;
+        cin>>name;
+    }
+     void disp()
+     {
+
+         cout<<"Name is:"<<name<<endl;
+         cout<<"Id is:"<<id<<endl;
+     }
+
+    };
+    class cource:public student
+    {
+    int cource_id;
+    public:
+    void get()
+    {
+        student::get();
+        cout<<"Enter cource id:"<<endl;
+        cin>>cource_id;
+    }
+    void disp()
+    {
+        student::disp();
+      cout<<"cource_id is:"<<cource_id<<endl;
+    }
+
+    };
+
+    int main()
+    {
+    cource c;
+    c.get();
+    c.disp();
+    return 0;
+    }
+
